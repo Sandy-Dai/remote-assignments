@@ -37,19 +37,16 @@ console.log(calculate({n1:1, n2:6, op:'x'})); //output'No supported'
 //Function,Array & Object
 function calculate(data){
     
-    // let SumPrice = discountedPrice.price;
-    
-    // console.log(SumPrice);
-    // for (let price in discountedPrice){
-    //     console.log(`${discountedPrice[price]}`)
-    // }
-    let discount = data.discount;
-    let price1 = data.products[0].price;
-    let price2 = data.products[1].price;
-    let price3 = data.products[2].price;
-    let totalPrice = price1 + price2 + price3;
-    let SumPrice = totalPrice * discount;
-    return SumPrice;
+    let discount = 1-data.discount; //取出object的方法
+    let products = data.products;   //取出object的方法
+    let sum = 0; //加總後的變數
+
+
+    for ( i=0 ; i < products.length ; i++) {
+         sum += products[i].price;  //取出array用[i] ; 取出object用.name || .price
+    }
+     return sum * discount;
+
 
 }
 const discountedPrice = calculate({
@@ -75,18 +72,25 @@ console.log(discountedPrice)
 //Algorithm (Advanced Optional)
 
 function twoSum(nums,target) {
+    
     for(i=0; i < nums.length-1; i++){
-        for(y=1; y < nums.length; y++){
+
+        for(y=i+1; y < nums.length; y++){
             let sum = nums[i] + nums[y];
             if( sum === target ){
                 return [i,y];
             }
         }
-    }   
-}
+     }
+}   
 
-// 0,1     0,2    0.3     1.2     1.3     2.3  
 
+// 0,1     0,2    0.3  0.4  0.5  0.6    0.7  0.8    
+    // 1.2     1.3    1.4      1.5     1.6      1.7        1.8 
+    // (2,1)   2.3     2.4     2.5     2.6     2.7     2.8
+    // (3,1)   (3,2)   3.4     3.5     3.6     3.7     3.8
+    // (4.1)   (4.2)   (4.3)   4.5
+    // (5.1)   (5.2)   (5.3)   (5.4)   5.6
 /* For example:
         twoSum([2,7,11,15],9);
     Should returns:
