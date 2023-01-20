@@ -27,7 +27,7 @@ app.get('/getData', function(req, res){
         });
 
 
-        
+
 
 
 
