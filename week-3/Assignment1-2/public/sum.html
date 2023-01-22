@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript And XML </title>
+</head>
+<body>
+    <!-- Hello World!!!!
+    <br> -->
+    <div id="result"></div>
+    
+    <script>
+        const result = document.getElementById('result');
+        //綁定事件
+            //1.創立對象
+            var xhr = new XMLHttpRequest();
+            //2.初始化 設置請求方法,url,是否非同步
+            xhr.open("GET", "http://localhost:3000/getData?number=10", true);
+            //3.發送
+            xhr.send();
+            //4.事件綁定 處理服務端返回的結果
+            //on when 當..時候
+            //readystate 是 xhr 對象中的屬性,表示狀態分5階段- 0未發請求 1完成open 2完成send 3返回部分結果 4返回全部結果 
+            //change 改變
+            xhr.onreadystatechange = function(){
+                //判斷（服務端返回了所有結果）
+                if(xhr.readyState === 4){
+                    //判斷回應狀態碼 200 404 403 401 500
+                    //2xx 成功
+                    if(xhr.status >= 200 && xhr.status < 300){
+                         //處理結果 行 頭 空行 體
+                         //回應
+                        console.log(xhr.status);//狀態碼 
+                        console.log(xhr.statusText);//狀態字符串 
+                        console.log(xhr.getAllResponseHeaders());//所有回應頭 
+                        console.log(xhr.response);//回應體
+
+                        //設置result的文本
+                        result.innerHTML = xhr.response;
+                    }else{}
+                }; 
+            };
+        
+    </script>
+    
+</body>
+</html>
