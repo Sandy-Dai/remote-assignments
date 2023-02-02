@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.activeMenu {
+  position: fixed;
+  background-color: white;
+  width: 270px;
+  height: 100%;
+  padding: 12px;
+  right: 0px;
+}
+
+.activeMenu div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeMenu span {
+  height: 45px;
+  padding: 10px;
+}
+
+.direction {
+  flex-direction: column;
+}
+
+.main-body {
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dcdcdc;
+  padding: 8px;
+}
+
+.r-header span {
+  padding-right: 40px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  padding: 55px;
+  background-color: #b0c4de;
+  font-weight: bold;
+}
+
+.Content-title {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.main-body {
+  display: flex;
+  justify-content: center;
+}
+
+.Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem 1rem;
+}
+
+.box {
+  background-color: #708090;
+}
+
+@media all and (min-width: 1200px) {
+  .Content {
+    width: 1200px;
+    height: 250px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .icon-1 {
+    display: none;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1199px) {
+  .Content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 280px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .icon-1 {
+    display: none;
+  }
+
+  .banner {
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 799px) {
+  .r-header {
+    display: none;
+  }
+  .Content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 320px;
+  }
+  .banner {
+    font-size: 25px;
+  }
+
+  .Content-title {
+    font-size: 18px;
+  }
+  .icon-1 {
+    display: none;
+  }
+
+  .header-container {
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 499px) {
+  .r-header {
+    display: none;
+  }
+
+  .Content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    height: 600px;
+  }
+
+  .banner {
+    font-size: 30px;
+  }
+
+  .Content-title {
+    font-size: 20px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .header-container {
+    align-items: center;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer p {
+  background-color: #b0c4de;
+  padding: 10px;
+}
