@@ -2,13 +2,7 @@ function delayedResult(n1, n2, delayTime, callback) {
   const sum = n1 + n2 + `(${n1} + ${n2})`;
 
   setTimeout(() => {
-    if (delayTime >= 3000) {
-      // console.log(sum);
-      callback(sum);
-    } else {
-      // window.alert(sum);
-      callback(sum);
-    }
+    callback(sum)
   }, delayTime);
 }
 
