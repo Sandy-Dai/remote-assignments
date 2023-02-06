@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/remote-assigngments/static/css/main.2605af6b.css",
-    "main.js": "/remote-assigngments/static/js/main.5aea88f6.js",
-    "static/js/787.28cb0dcd.chunk.js": "/remote-assigngments/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/remote-assigngments/index.html",
-    "main.2605af6b.css.map": "/remote-assigngments/static/css/main.2605af6b.css.map",
-    "main.5aea88f6.js.map": "/remote-assigngments/static/js/main.5aea88f6.js.map",
-    "787.28cb0dcd.chunk.js.map": "/remote-assigngments/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/remote-assignments/static/css/main.2605af6b.css",
+    "main.js": "/remote-assignments/static/js/main.b5006188.js",
+    "static/js/787.28cb0dcd.chunk.js": "/remote-assignments/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/remote-assignments/index.html",
+    "main.2605af6b.css.map": "/remote-assignments/static/css/main.2605af6b.css.map",
+    "main.b5006188.js.map": "/remote-assignments/static/js/main.b5006188.js.map",
+    "787.28cb0dcd.chunk.js.map": "/remote-assignments/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2605af6b.css",
-    "static/js/main.5aea88f6.js"
+    "static/js/main.b5006188.js"
   ]
 }
